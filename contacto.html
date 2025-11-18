@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #f{background-color: white;
+            padding: 90px;
+            grid-area: contacto;
+            background-size: 100%;
+            background-position: center;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: nowrap;
+
+
+        }
+        .texto-footer{
+            background-color: white;
+            top: 15%;
+            left: 10%;
+            margin-right: 80px;
+            font-family: poppins, sans-serif;
+
+
+        }
+        .texto-footer h1{
+            font-weight: bold;
+            font-size: 3rem;
+            animation-name: subir;
+            animation-duration: 1s;
+        }
+       @keyframes subir {
+            0% {
+                transform: translate(2px,100px);
+            }
+           
+           
+        }
+        .texto-footer p{
+            margin-top: 1rem;
+            font-size: 1.25rem;
+            animation-name: subirp;
+            animation-duration: 1s;
+        }
+           @keyframes subirp {
+            0% {
+                transform: translate(2px,100px);
+            }
+           
+           
+        }
+
+        .imagen-footer {
+            border-radius: 50px;
+            width: 400px;
+            height: 400px;
+            
+        }
+        address{
+            background-color: white;
+            padding: 159px;
+            grid-area: contacto;
+            background-size: 100%;
+            background-position: center;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+        #uno{
+            background-color: white;
+            width: 450px;
+            height: 250px;
+        }
+        #dos{
+            background-color: white;
+            width: 450px;
+            height: 300px;
+        }
+        #tres{
+            background-color: white;
+            width: 450px;
+            height: 300px;
+        }
+        .logo{
+           width: 50px;
+           margin: center; 
+        }
+        .titulos{
+            font-family: poppins, sans-serif;
+            text-align: center;  
+        }
+        .text{
+            font-family: poppins, sans-serif;
+            text-align: center;
+            font-size: 20px;
+        }
+         #barra{
+            position: fixed;
+            width: 1300px;
+            height: 65px;
+            margin-left: 280px;
+            margin-right: 100px;
+            margin-top: 20px;
+            background:none;
+            border-radius: 50px;
+            display:flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            border: 1px solid;
+            border-color: black;
+        }      
+         #orga{
+            position: relative;
+            left: 15px;
+            bottom: 8px;
+        }
+         #links{
+            display: flex;
+            flex-direction: row;
+        }
+       
+        #link1{
+            margin-right: 10px;
+        }
+        #link2{
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+       
+        #link3{
+            margin-left: 10px;
+        }
+        #descu{
+            background-color: rgba(172, 255, 47, 0.705);
+            padding: 13px;
+            padding-left: 20px;
+            border-radius: 50px;
+        }
+       
+        #descu2{
+            position: relative;
+            bottom: 11px;
+            right: 8px;
+        }
+        a{
+            display: flex;
+            text-decoration: none;
+            color: black;
+        }
+        #barra.desliza{
+            background-color: rgb(254, 246, 246);
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        const scrollY = window.scrollY;
+        const newSize = Math.min(120, 100 + scrollY / 15);
+        header.style.backgroundSize = `${newSize}%`;
+        });
+        window.addEventListener('scroll', () => {
+        const barra = document.getElementById('barra');
+        if (window.scrollY > 50) {
+        barra.classList.add('desliza');  // Aplica clase que reduce el menú
+        } else {
+        barra.classList.remove('desliza'); // Quita clase cuando vuelve arriba
+        }
+        });
+    </script>  
+
+    <center>
+    <nav id="barra">
+    <div><a href="maquetadoOZ.html" id="orga"><h1>OrganicZone</h1></a></div>
+    <section id="links">
+    <a href="menu.html" id="link1"><h3>Menu</h3></a>
+    <a href="contacto.html" id="link2"><h3>Contacto</h3></a>
+    <a href="sobreNosotros.html" id="link3"><h3>Sobre Nosotros</h3></a>
+    </section>
+    <section><a href="" id="descu2"><h3 id="descu">Descubrir</h3></a></section>
+    </nav>
+    </center>
+
+
+    <footer id="f">
+        <div class="texto-footer">
+            <h1 > Hamburguesas naturalmente<br> deliciosas</h1>
+            <p>En Organic Zone, estamos comprometidos a servir hamburguesas con <br>sabores naturales e ingredientes orgánicos. <br>¡Contáctenos con cualquier pregunta o comentario!</p>
+        </div>
+        <img  class="imagen-footer" src="ham.jpg" alt="">
+       
+       
+    </footer>
+    <address>
+        <div id="uno">
+            <center><img class="logo" src="sobre.png" alt=""></center>
+            <h1 class="titulos">Contáctenos</h1>
+            <p class="text">Póngase en contacto con Organic Zone para<br> consultas, reservas o comentarios. Nuestro equipo está dedicado a brindarle la<br> mejor experiencia de hamburguesa orgánica.<br> No dude en llamarnos, enviarnos un correo electrónico o visitarnos en persona. <br>¡Esperamos poder atenderle!</p>
+
+
+        </div>
+        <div id="dos">
+            <center><img class="logo" src="telefono.png" alt=""></center>
+            <h1 class="titulos">Llámenos</h1>
+            <p class="text">+591 70376053 <br>Nuestro amable personal está disponible para atender sus llamadas durante el horario comercial. Ya sea que tenga preguntas sobre nuestro menú <br>o desee hacer una reserva, estamos aquí para ayudarle.</p>
+        </div>
+        <div id="tres">
+            <center><img class="logo" src="ubi.svg" alt=""></center>
+            <h1 class="titulos">Visítenos</h1>
+            <p class="text">Colegio Pedro Poveda Plazuela Tarija, Av. América, Cochabamba Bolivia<br>Venga y disfrute de nuestras hamburguesas orgánicas gourmet en un ambiente acogedor y natural. Estamos ubicados en el corazón de San Francisco, de fácil acceso y acogedores para todos los huéspedes.</p>
+        </div>
+    </address>
+</body>
+</html>
