@@ -4,8 +4,221 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        
+        .t1{
+            width: 700px;
+            height: 200px;
+            font-size: 80px;
+            font-family: poppins, sans-serif;
+        }
+        #titulo{
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+         #barra{
+            position: fixed;
+            width: 1300px;
+            height: 65px;
+            margin-left: 280px;
+            margin-right: 100px;
+            margin-top: 20px;
+            background:none;
+            border-radius: 50px;
+            display:flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            border: 1px solid;
+            border-color: black;
+        }      
+         #orga{
+            position: relative;
+            left: 15px;
+            bottom: 8px;
+        }
+         #links{
+            display: flex;
+            flex-direction: row;
+        }
+       
+        #link1{
+            margin-right: 10px;
+        }
+        #link2{
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+       
+        #link3{
+            margin-left: 10px;
+        }
+        #descu{
+            background-color: rgba(172, 255, 47, 0.705);
+            padding: 13px;
+            padding-left: 20px;
+            border-radius: 50px;
+        }
+       
+        #descu2{
+            position: relative;
+            bottom: 11px;
+            right: 8px;
+        }
+        a{
+            display: flex;
+            text-decoration: none;
+            color: black;
+        }
+        #barra.desliza{
+            background-color: rgb(254, 246, 246);
+            transition: 1s;
+        }
+        .a{
+            
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+         .productos{
+            width: 400px;
+            height: 800px;
+            border-radius: 50px;
+        }
+         .imagenes{
+            border-radius: 50px;
+            width: 400px;
+        }
+        .titulos{
+            text-align: center;
+            color: black;
+            font-family: poppins;
+           display: flex;
+           justify-content: center;
+        }
+        #c{
+            background-color: black;
+            grid-area: piepag;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            font-family: poppins, sans-serif;
+            color: white;
+        }
+        address{
+            width: 100%;
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+            flex-wrap: nowrap;
+           
+        }
+        #direc{
+            width: 450px;
+            height: 200px;
+        }
+        #cont{
+            width: 450px;
+            height: 200px;
+        }
+        #mail{
+            width: 450px;
+            height: 200px;
+        }
+        .imgfooter{
+            border-radius: 50px;
+            width: 40px;
+        }
+    </style>
 </head>
 <body>
+    <script>
+        document.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        const scrollY = window.scrollY;
+        const newSize = Math.min(120, 100 + scrollY / 15);
+        header.style.backgroundSize = `${newSize}%`;
+        });
+        window.addEventListener('scroll', () => {
+        const barra = document.getElementById('barra');
+        if (window.scrollY > 50) {
+        barra.classList.add('desliza');  // Aplica clase que reduce el menú
+        } else {
+        barra.classList.remove('desliza'); // Quita clase cuando vuelve arriba
+        }
+        });
+    </script>  
+    <center>
+    <nav id="barra">
+    <div><a href="maquetadoOZ.html" id="orga"><h1>OrganicZone</h1></a></div>
+    <section id="links">
+    <a href="menu.html" id="link1"><h3>Menu</h3></a>
+    <a href="contacto.html" id="link2"><h3>Contacto</h3></a>
+    <a href="sobreNosotros.html" id="link3"><h3>Sobre Nosotros</h3></a>
+    </section>
+    <section><a href="" id="descu2"><h3 id="descu">Descubrir</h3></a></section>
+    </nav>
+    </center>
+    <section id="titulo">
+        <center><h1 class="t1">NUESTRO MENU</h1></center>
+    </section>
+     <section class="a" class="titulos" >
+        <div class="productos" >
+            <img class="imagenes" src="img1.webp" alt="">
+            <h1>Hamburguesa Orgánica Clásica</h1> 
+        </div>
+        <div class="productos">
+            <img class="imagenes" src="img2.webp" alt="">
+            <h1>Hamburguesa Delicia Vegetal</h1>
+            </div>
+        <div class="productos">
+            <img class="imagenes" src="img3.webp" alt="">
+            <h1>Hamburguesa Fiesta Picante</h1>
+            </div>
+        <div class="productos">
+            <img class="imagenes" src="img4.webp" alt="">
+            <h1>Hamburguesa Suiza con Champiñones</h1>
+            </div>
+    </section>
+
+    <section class="a" class="titulos">
+        <div class="productos">
+            <img class="imagenes" src="papas.jpeg" alt="">
+            <h1>Papas Fritas</h1>
+        </div>
+        <div class="productos">
+            <img class="imagenes" src="bebida.avif" alt="">
+            <h1>Bebida Organic</h1>
+        </div>
+    </section>
+    <footer id="c" >
+        <center>
+        <p> <strong>VISITANOS</strong></p>
+        <strong><h1>Encuéntranos en el <br> Colegio Pedro Poveda </h1></strong>
+        <p>Ven a visitarnos en Colegio Pedro Poveda Plazuela Tarija, Av. América, Cochabamba y disfruta de nuestras hamburguesas <br> gourmet orgánicas en un ambiente acogedor.</p>
+        </center><br>
+
+
+        <address>
+           
+            <div id="direc">
+                <center><img class="imgfooter" src="ubicacion.png" alt=""></center>
+                <center><h1><strong>DIRECCION</strong></h1></center>
+                <center><p>Colegio Pedro Poveda Plazuela Tarija, Av. América, Cochabamba Bolivia</p></center>
+
+
+            </div>
+            <div id="cont">
+                <center><img class="imgfooter"  src="llamenos.png" alt=""></center>
+                 <center><h1><strong>CONTACTO</strong></h1></center>
+                 <center><p>+591 70376053 <br>Llámanos para reservas o consultas.</p></center>
+            </div>
+            <div id="mail">
+                <center><img class="imgfooter"  src="contacto.jpg" alt=""></center>
+                 <center><h1><strong>CORREO ELECTRONICO</strong></h1></center>
+                 <center><p style="color: greenyellow;"> organiczone@gmail.com</p>Esperamos tener noticias tuyas.</p></center>
+            </div>
+        </address>
+    </footer>
     
 </body>
 </html>
