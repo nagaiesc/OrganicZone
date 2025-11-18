@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body{
+            display: grid;
+            grid-template-rows: 500px, 500px;
+            grid-template-columns: 100%;
+            grid-template-areas:
+            "na"
+            "cabecera"
+            "cuerpo1"
+            "cuerpo2"
+            "piepag"
+            ;
+        }
+        header{
+            padding: 500px;
+            grid-area: cabecera;
+            background-size: 100%;
+            background-position: center;
+            background-image: url(FONDO.webp);
+            filter: brightness(0.7); /*baja el brillo un 70%*/
+            background-repeat: no-repeat;
+            transition: background-size 1.5s ease;
+            
+        }
+        .texto-header {
+            font-family: 'Poppins', sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            max-width: 900px;
+            padding: 100px;
+            color: white;
+        }
+
+
+        .texto-header h1 {
+            font-weight: bold;
+            font-size: 3rem;
+            text-decoration: underline;
+        }
+
+
+        .texto-header p {
+           font-family: 'Open Sans', sans-serif;
+            margin-top: 1rem;
+            font-size: 1.25rem;
+        }
+       
+        #a{
+            background-color: rgb(233, 245, 234);
+            grid-area: cuerpo1;
+        }
+        section{
+            padding-top: 500px;
+        }
+        nav{
+            grid-area: na;
+            background-color: rgb(11, 44, 3);
+            padding-top: 20px;
+            padding-left: 1000px;
+         
+            display:flex;
+            flex-wrap: nowrap;
+            position: absolute;
+        }
+        #uno{
+            background-color: rgb(95, 95, 53);
+            position: relative;
+            width: 400px;
+            height: 650px;
+            left: 50px;
+            bottom: 280px;
+        }
+        #dos{
+            background-color: rgb(134, 165, 116);
+            position: relative;
+            width: 400px;
+            height: 650px;
+            left: 520px;
+            bottom: 930px;
+        }
+        #tres{
+            background-color: rgb(78, 114, 83);
+            position: relative;
+            width: 400px;
+            height: 650px;
+            left: 985px;
+            bottom: 1580px;
+        }
+        #cuatro{
+            background-color: rgb(71, 90, 48);
+            position: relative;
+            width: 400px;
+            height: 650px;
+            left: 1450px;
+            bottom: 2230px;
+        }
+        #b{
+            background-color: rgb(136, 163, 139);
+            grid-area: cuerpo2;
+            padding: 400px;
+        }
+        #c{
+            background-color: rgb(137, 179, 169);
+            grid-area: piepag;
+            padding: 200px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        const scrollY = window.scrollY;
+        const newSize = Math.min(120, 100 + scrollY / 15);
+        header.style.backgroundSize = `${newSize}%`;
+        });
+        </script>  
+
+
+    <header>
+        <div class="fondo"></div>
+        <div class="texto-header">
+            <h1>Experiencia Sabor Natural en<br> Organic Zone</h1>
+            <p>Descubre el sabor de nuestras hamburguesas orgánicas, elaboradas con los ingredientes más frescos. Obtenemos nuestros productos localmente para ofrecerte los mejores sabores que la naturaleza tiene para ofrecer. ¡Prueba la diferencia hoy mismo!</p>
+        </div>
+   
+    </header>
+    <nav>1</nav>
+    <section id="a">
+        <div id="uno">1</div>
+        <div id="dos">1</div>
+        <div id="tres">1</div>
+        <div id="cuatro">1</div>
+    </section>
+    <section id="b"></section>
+    <footer id="c"></footer>
+</body>
+</html>
