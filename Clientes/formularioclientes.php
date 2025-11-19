@@ -6,14 +6,12 @@
     <title>Document</title>
 <style> 
     div{
-        background-color:#64c27b;
+        background-color:;
         height: 500px;
         width: 400px;
         display: flex;
         justify-content: center;
         align-items: center;
-        
-
 }
     </style>
 </head>
