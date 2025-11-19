@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style> 
-    div{
-        background-color:;
+    <style>
+        div{
+        background-color:blue;
         height: 500px;
         width: 400px;
         display: flex;
         justify-content: center;
         align-items: center;
 }
-    </style>
+</style>
 </head>
 <body>
     <div> <center>
