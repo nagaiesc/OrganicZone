@@ -221,6 +221,62 @@
             border-radius: 50px;
             width: 40px;
         }
+        @media (max-width: 700px) {
+body {
+    display: block;
+  }
+  header{
+    padding-bottom: 500px;
+    grid-area: cabecera;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-size 1.5s ease;
+        }
+  #barra {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  #a, #b {
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+  }
+  .productos {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+ 
+  .texto-header {
+   margin-top: 100px;
+    max-width: 90%;
+  }
+  #cinco {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+  #bf, #bf img {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    border-radius: 30px;
+  }
+  address {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+  #direc, #cont, #mail {
+    width: 100%;
+    height: auto;
+  }
+}
 
     </style>
 </head>
@@ -241,14 +297,6 @@
         }
         });
     </script>  
-
-
-
-
-
-
-
-
     <script>
         document.addEventListener('scroll', () => {
         const header = document.querySelector('header');
@@ -257,10 +305,6 @@
         header.style.backgroundSize = `${newSize}%`;
         });
         </script>  
-
-
-
-
     <header>
         <div class="fondo"></div>
         <div class="texto-header">
