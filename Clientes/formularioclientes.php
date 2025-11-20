@@ -102,9 +102,6 @@ input[type="submit"]:hover {
     <form action="clientes.php" method="post">
        
         <table>
-        <tr>  
-        <th><label for="id">id:</label></th>
-        </tr> 
         <tr>
         <td><input type="number" name ="id"required></td>
         </tr>
