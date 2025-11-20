@@ -23,7 +23,7 @@ body {
 }
 
 .form-container {
-    background: rgba(204, 43, 43, 0.35);
+    background: rgba(206, 101, 101, 0.35);
     box-shadow: 0 8px 32px rgba(55,45,45,0.18);
     border-radius: 28px;
     backdrop-filter: blur(14px); 
@@ -47,7 +47,7 @@ body {
 }
 
 label {
-    color: #65a58491;  
+    color: #bff8da91;  
     font-weight: 600;
     font-size: 1em;
     margin-bottom: 7px;
@@ -81,7 +81,7 @@ input:focus {
 
 input[type="submit"] {
     background: linear-gradient(90deg,#61d799 70%, #b4e7c3 100%);
-    color: #1b3122;
+    color: #e0873dff;
     font-weight: bold;
     border: none;
     border-radius: 18px;
