@@ -6,7 +6,13 @@
     <title>Document</title>
     <style>
         div{
-        background-color:green;
+        background  : url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fes%2Ffotos%2Ffondo-de-naturaleza-verde-con-palmeras&psig=AOvVaw2FwWX5yy0TyzlHT0Swur8Q&ust=1763760701156000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCODevPrWgZEDFQAAAAAdAAAAABAE);
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 500px;
         width: 400px;
         display: flex;
