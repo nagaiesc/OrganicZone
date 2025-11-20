@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style> 
-    div{
-        background-color:#64c27b;
+    <style>
+        div{
+        background-color:blue;
         height: 500px;
         width: 400px;
         display: flex;
         justify-content: center;
         align-items: center;
-        
-
 }
 body {
     background: #d6eccfff; 
@@ -95,7 +93,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background: linear-gradient(90deg,#54b98a 60%, #64c27b 100%);
 }
-
     </style>
 </head>
 <body>
@@ -103,9 +100,6 @@ input[type="submit"]:hover {
     <form action="clientes.php" method="post">
        
         <table>
-        <tr>  
-        <th><label for="id">id:</label></th>
-        </tr> 
         <tr>
         <td><input type="number" name ="id"required></td>
         </tr>
