@@ -8,11 +8,6 @@
         div{
         background-image: url(fondoform.jpg);
         background-size: cover;
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 500px;
         width: 400px;
         display: flex;
