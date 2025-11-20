@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         div{
-        background-color:blue;
+        background-color:green;
         height: 500px;
         width: 400px;
         display: flex;
@@ -14,45 +14,44 @@
         align-items: center;
 }
 body {
-    background: #d6eccfff; 
     min-height: 100vh;
-    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #ede6da 60%, #fbeedb 100%);
+    font-family: 'Inter', Arial, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
 }
 
-.form-container {
-    background: rgba(255,255,255,0.35);
-    box-shadow: 0 8px 32px rgba(55,45,45,0.18);
+.caja-formulario {
+    background: rgba(255,255,250,0.68);
     border-radius: 28px;
-    backdrop-filter: blur(14px); 
+    box-shadow: 0 8px 38px rgba(128,95,25,0.18);
+    backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    padding: 34px 30px;
+    border: 2px solid rgba(232,227,198,0.21);
+    padding: 36px 32px 28px 32px;
     width: 370px;
-    min-width: 310px;
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
-    border: 1.5px solid rgba(255,255,255,0.35);
+    max-width: 98vw;
+    margin: 0 18px;
 }
 
-.form-title {
-    font-size: 1.6em;
-    font-weight: 700;
-    color: #213d29;
-    margin-bottom: 12px;
-    letter-spacing: -2px;
-    text-align: left;
+.caja-formulario form {
+    width: 100%;
+}
+
+.caja-formulario table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
 }
 
 label {
-    color: #5eb286;  
+    color: #4ac17a;
     font-weight: 600;
     font-size: 1em;
     margin-bottom: 7px;
     display: block;
-    letter-spacing: -0.5px;
 }
 
 input[type="text"],
@@ -60,89 +59,99 @@ input[type="email"],
 input[type="number"],
 input[type="password"],
 input[type="date"] {
-    width: 100%;
-    padding: 13px;
-    margin-bottom: 12px;
-    border-radius: 14px;
-    background: rgba(235, 250, 240, 0.65);
-    font-size: 1.03em;
+    width: 97%;
+    padding: 12px;
+    border-radius: 15px;
+    border: none;
+    background: rgba(235,245,235,0.93);
+    font-size: 1em;
     color: #222;
-    box-sizing: border-box;
-    box-shadow: 0 2px 8px rgba(80,85,60,0.08);
-    transition: background 0.2s, box-shadow 0.2s;
-   
+    margin-bottom: 6px;
+    box-shadow: 0 1.5px 7px rgba(160,155,95,0.06);
+    outline: none;
+    transition: box-shadow 0.18s, background 0.13s;
 }
 
 input:focus {
-    background: rgba(176,225,191,0.37);
-    box-shadow: 0 0 0 2px #8cd1ae;
+    background: rgba(210,246,225,0.86);
+    box-shadow: 0 0 0 2px #7ee1b5;
 }
 
 input[type="submit"] {
-    background: linear-gradient(90deg,#61d799 70%, #b4e7c3 100%);
-    color: #1b3122;
+    background: linear-gradient(90deg,#60de9f 60%, #ffe9da 100%);
+    color: #222d22;
     font-weight: bold;
+    border: none;
     border-radius: 18px;
-    padding: 14px;
-    font-size: 1.11em;
-    box-shadow: 0 2px 12px rgba(55,45,45,0.15);
+    padding: 12px 0;
+    font-size: 1.02em;
+    margin-top: 10px;
+    box-shadow: 0 2px 12px rgba(150,150,130,0.13);
     cursor: pointer;
-    transition: background 0.16s;
+    width: 100%;
+    letter-spacing: 0.5px;
+    transition: background 0.17s;
 }
 
 input[type="submit"]:hover {
-    background: linear-gradient(90deg,#54b98a 60%, #64c27b 100%);
+    background: linear-gradient(90deg,#44be96 60%, #ffe9da 100%);
 }
+
+
     </style>
 </head>
 <body>
-    <div> <center>
-    <form action="clientes.php" method="post">
-       
-        <table>
-        <tr>
-        <td><input type="number" name ="id"required></td>
-        </tr>
-        <tr>
-        <th><label for="nombre">Nombre del cliente:</label></th>
-        </tr>
-        <tr>
-        <td><input type="text" name ="nombre"required></td>
-        </tr>
-        <tr>
-        <th><label for="apellido">Apellido del cliente:</label></th>
-        </tr>
-        <tr>
-        <td><input type="text" name ="apellido"required></td>
-        </tr>
-        <tr>
-        <th><label for="nombreusuario">Nombre de usuario:</label></th>
-        </tr>
-        <tr>
-        <td><input type="text" name ="nombreusuario"required></td>
-        </tr>
-        <tr>
-        <th><label for="correo">Correo-gmail:</label></th>
-        </tr>
-        <tr>
-        <td><input type="email" name ="correo"required></td>
-        </tr>
-        <tr>
-        <th><label for="contrasena">Contraseña:</label></th>
-        </tr>
-        <tr>
-        <td><input type="password" name ="contrasena"required></td>
-        </tr>
-         <tr>
-        <th><label for="fechanacimiento">Fecha de nacimiento:</label></th>
-        </tr>
-        <tr>
-        <td><input type="date" name ="fechanacimiento"required></td>
-        </tr>
-        </table>
-        <input type="submit" value="Enviar">
-        
-    </form>
-</div></center>
+ <body>
+    <div class="caja-formulario">
+        <form action="clientes.php" method="post">
+            <table>
+                <tr>
+                    <td><label for="id">ID:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="id" required></td>
+                </tr>
+                <tr>
+                    <td><label for="nombre">Nombre del cliente:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="nombre" required></td>
+                </tr>
+                <tr>
+                    <td><label for="apellido">Apellido del cliente:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="apellido" required></td>
+                </tr>
+                <tr>
+                    <td><label for="nombreusuario">Nombre de usuario:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="nombreusuario" required></td>
+                </tr>
+                <tr>
+                    <td><label for="correo">Correo-gmail:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="email" name="correo" required></td>
+                </tr>
+                <tr>
+                    <td><label for="contrasena">Contraseña:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="contrasena" required></td>
+                </tr>
+                <tr>
+                    <td><label for="fechanacimiento">Fecha de nacimiento:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="date" name="fechanacimiento" required></td>
+                </tr>
+            </table>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+
 </body>
 </html>
