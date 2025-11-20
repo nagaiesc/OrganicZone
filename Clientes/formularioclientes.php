@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
         div{
-        background-image: url(fondoform.jpg);
-        background-size: cover;
-        height: 500px;
-        width: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+            background: rgba(0, 0, 0, 0.1); 
+    border-radius: 18px;
+    padding: 34px 30px;
+    width: 370px;
+    min-width: 310px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    box-shadow: 2px 6px 32px rgba(189, 173, 173, 0.21); 
+    border: 1.5px solid rgba(226, 238, 236, 0.37); 
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    
+    outline: 1px solid rgba(220, 220, 220, 0.18)
+
 }
 body {
     background-image: url(fondoform.jpg);
@@ -24,7 +33,7 @@ body {
 }
 
 .form-container {
-    background: rgba(206, 101, 101, 0.35);
+    background: rgba(109, 163, 123, 0.35);
     box-shadow: 0 8px 32px rgba(55,45,45,0.18);
     border-radius: 28px;
     backdrop-filter: blur(14px); 
@@ -98,7 +107,7 @@ input[type="submit"]:hover {
 }
     </style>
 </head>
-<body>
+<body img src="fondoform.jpg">
     <div> <center>
     <form action="clientes.php" method="post">
        
