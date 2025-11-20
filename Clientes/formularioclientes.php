@@ -16,7 +16,7 @@
 
 }
 body {
-    background: #ecdfcf; /* fondo beige suave */
+    background: #d6eccfff; 
     min-height: 100vh;
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     display: flex;
@@ -28,7 +28,7 @@ body {
     background: rgba(255,255,255,0.35);
     box-shadow: 0 8px 32px rgba(55,45,45,0.18);
     border-radius: 28px;
-    backdrop-filter: blur(14px); /* efecto glassmorphism */
+    backdrop-filter: blur(14px); 
     -webkit-backdrop-filter: blur(14px);
     padding: 34px 30px;
     width: 370px;
@@ -49,7 +49,7 @@ body {
 }
 
 label {
-    color: #5eb286;  /* Verde suave, no chillón */
+    color: #5eb286;  
     font-weight: 600;
     font-size: 1em;
     margin-bottom: 7px;
