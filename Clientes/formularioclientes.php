@@ -20,7 +20,7 @@
         align-items: center;
 }
 body {
-    background: #ffffffff;
+    background-image: url(fondoform.jpg);
     min-height: 100vh;
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     display: flex;
