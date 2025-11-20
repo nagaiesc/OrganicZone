@@ -65,7 +65,6 @@ input[type="date"] {
     width: 100%;
     padding: 13px;
     margin-bottom: 12px;
-    border: none;
     border-radius: 14px;
     background: rgba(235, 250, 240, 0.65);
     font-size: 1.03em;
@@ -73,7 +72,7 @@ input[type="date"] {
     box-sizing: border-box;
     box-shadow: 0 2px 8px rgba(80,85,60,0.08);
     transition: background 0.2s, box-shadow 0.2s;
-    outline: none;
+   
 }
 
 input:focus {
@@ -85,7 +84,6 @@ input[type="submit"] {
     background: linear-gradient(90deg,#61d799 70%, #b4e7c3 100%);
     color: #1b3122;
     font-weight: bold;
-    border: none;
     border-radius: 18px;
     padding: 14px;
     font-size: 1.11em;
