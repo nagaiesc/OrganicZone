@@ -14,7 +14,7 @@
         align-items: center;
 }
 body {
-    background: #ecdfcf;
+    background: #ffffffff;
     min-height: 100vh;
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     display: flex;
@@ -23,7 +23,7 @@ body {
 }
 
 .form-container {
-    background: rgba(255,255,255,0.35);
+    background: rgba(204, 43, 43, 0.35);
     box-shadow: 0 8px 32px rgba(55,45,45,0.18);
     border-radius: 28px;
     backdrop-filter: blur(14px); 
@@ -40,14 +40,14 @@ body {
 .form-title {
     font-size: 1.6em;
     font-weight: 700;
-    color: #213d29;
+    color: #ffffffff;
     margin-bottom: 12px;
     letter-spacing: -2px;
     text-align: left;
 }
 
 label {
-    color: #5eb286;  
+    color: #65a58491;  
     font-weight: 600;
     font-size: 1em;
     margin-bottom: 7px;
