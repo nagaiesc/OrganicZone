@@ -14,7 +14,7 @@
         align-items: center;
 }
 body {
-    background: #ecdfcf; 
+    background: #ecdfcf;
     min-height: 100vh;
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     display: flex;
@@ -95,7 +95,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background: linear-gradient(90deg,#54b98a 60%, #64c27b 100%);
 }
-
     </style>
 </head>
 <body>
