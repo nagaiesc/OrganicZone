@@ -238,9 +238,9 @@ function enviarDatos() {
   <div class="cajp">
     <nav class="nav">
       <div class="izq">
-        <a href="sobre">Sobre Nosotros</a>
+        <a href="">Sobre Nosotros</a>
         <a href="http://localhost/OrganicZone/maquetadoOZ.html" class="inic">Inicio</a>
-        <a href="#">Contact</a>
+        <a href="">Contact</a>
       </div>
       <div class="med">ORGANIC ZONE</div>
       <div class="der">
