@@ -31,7 +31,7 @@ ENGINE = InnoDB;
 -- Table `productosOz`.`clientes`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `productosOz`.`clientes` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL,
   `apellido` VARCHAR(45) NULL,
   `nombreusuario` VARCHAR(45) NULL,

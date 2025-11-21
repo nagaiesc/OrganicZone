@@ -214,32 +214,12 @@
 </head>
 <body>
   <img src="" alt="">
-  <script>
-function enviarDatos() {
-  const datos = {
-    id: document.getElementById('id').value,
-    nombre: document.getElementById('nombre').value,
-    apellido: document.getElementById('apellido').value,
-    nombreusuario: document.getElementById('nombreusuario').value,
-    correo: document.getElementById('correo').value,
-    contrasena: document.getElementById('contrasena').value,
-    fechanacimiento: document.getElementById('fechanacimiento').value
-  };
 
-  fetch("clientes.php", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify(datos)
-  })
-  .then(response => response.text())
-  .then(data => alert("Respuesta: " + data));
-}
-</script>
   <div class="cajp">
     <nav class="nav">
       <div class="izq">
         <a href="">Sobre Nosotros</a>
-        <a href="http://localhost/OrganicZone/maquetadoOZ.html" class="inic">Inicio</a>
+        <a href="../maquetadoOZ.html" class="inic">Inicio</a>
         <a href="">Contact</a>
       </div>
       <div class="med">ORGANIC ZONE</div>
@@ -260,10 +240,9 @@ function enviarDatos() {
         </div>
       </div>
       <div class="comi">
-        <form class="forma">
+        <form class="forma" method="post" action="clientes.php">
           <div class="fil">
             <div>
-             <input type="hidden" id="id" name="id" value="VALOR_ID">
               <label for="nombre">Nombre del cliente</label><br>
               <input type="text" name="nombre" placeholder="Nombre del cliente" required >
             </div>
@@ -284,7 +263,7 @@ function enviarDatos() {
             <label for="news">Inicia Sesion para no perderte de nada!!</label> 
           </div>
           <label>Contraseña</label><br>
-          <input type="password" name="contraseña" required><br>
+          <input type="password" name="contrasena" required><br>
           <button type="submit" value="Enviar">Enviar</button>
         </form>
       </div>
