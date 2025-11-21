@@ -172,12 +172,12 @@
       box-sizing: border-box;
     }
     .pie .correo {
-      font-size: 27px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
+     font-size: 29px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
       display: flex;
       gap: 50px;
-      margin-bottom: 12px;
+      margin-bottom: 60px;
     }
     .pie .deta {
       font-size: 14px;
@@ -197,7 +197,7 @@
       margin-right: 7px;
     }
     .pie .pielin span {
-      margin: 0 4px;
+      margin: 0 7px;
       opacity: 0.6;
     }
     @media (max-width: 900px) {
