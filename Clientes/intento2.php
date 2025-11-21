@@ -13,10 +13,10 @@
       min-height: 100vh;
     }
     .cajp {
-      background: #fff;
+      background: #aa1e1eff;
       margin: 60px auto 0 auto;
       max-width: 1050px;
-      border-radius: 8px;
+      border-radius: 60px;
       box-shadow: 0 2px 32px rgba(0,0,0,0.08);
       padding: 40px 60px 0 60px;
       box-sizing: border-box;
