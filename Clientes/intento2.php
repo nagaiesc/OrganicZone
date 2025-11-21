@@ -6,7 +6,7 @@
     <title>Document</title>
   <style>
     body {
-      background-image: url(fondos.jpeg);
+      background-image: url(fondos);
       background-size: 100%;
       background-position: center;
       background-repeat: no-repeat;
@@ -213,6 +213,7 @@
   </style>
 </head>
 <body>
+  <img src="" alt="">
   <script>
 function enviarDatos() {
   const datos = {
@@ -237,8 +238,8 @@ function enviarDatos() {
   <div class="cajp">
     <nav class="nav">
       <div class="izq">
-        <a href="#">Sobre Nosotros</a>
-        <a href="#" class="inic">Inicio</a>
+        <a href="sobre">Sobre Nosotros</a>
+        <a href="http://localhost/OrganicZone/maquetadoOZ.html" class="inic">Inicio</a>
         <a href="#">Contact</a>
       </div>
       <div class="med">ORGANIC ZONE</div>
