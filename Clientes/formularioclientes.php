@@ -21,8 +21,7 @@
     -webkit-backdrop-filter: blur(14px) saturate(140%);
     
     outline: 1px solid rgba(220, 220, 220, 0.18)
-
-}
+        }
 body {
     background-image: url(fondoform.jpg);
     min-height: 100vh;
@@ -105,6 +104,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background: linear-gradient(90deg,#54b98a 60%, #64c27b 100%);
 }
+
     </style>
 </head>
 <body img src="fondoform.jpg">
