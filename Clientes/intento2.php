@@ -6,14 +6,17 @@
     <title>Document</title>
   <style>
     body {
-      background-image: url(FONDO.jpeg);
+      background-image: url(fondos.jpeg);
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
       margin: 0;
       font-family: 'Inter', Arial, Helvetica, sans-serif;
       color: #111;
       min-height: 100vh;
     }
     .cajp {
-      background: #aa1e1eff;
+      background: #fff;
       margin: 60px auto 0 auto;
       max-width: 1050px;
       border-radius: 60px;
