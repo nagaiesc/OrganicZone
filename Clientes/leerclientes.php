@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Lista de Clientes</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 <style>
 html, body {
     height: 100%;
@@ -38,7 +38,7 @@ body {
         grid-template-columns: 330px 1fr;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .principal-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;

@@ -20,7 +20,7 @@
       margin: 60px auto 0 auto;
       max-width: 1050px;
       border-radius: 60px;
-      box-shadow: 0 2px 32px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 32px rgba(139, 66, 66, 0.53);
       padding: 40px 60px 0 60px;
       box-sizing: border-box;
     }
@@ -71,7 +71,7 @@
       margin-left: 8px;
     }
     .nav .sesion {
-      background: #ececec;
+      background: #ffffffff;
       border: none;
     }
     .nav .reg {
@@ -115,7 +115,7 @@
     .forma select,
     .forma textarea {
       border: none;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #ffffffff;
       font-size: 17px;
       margin-bottom: 16px;
       width: 98%;
@@ -161,7 +161,7 @@
       transition: background 0.18s;
     }
     .forma button:hover {
-      background: #333;
+      background: #ffffffff;
     }
     .pie {
       background-color: #ffffff;
