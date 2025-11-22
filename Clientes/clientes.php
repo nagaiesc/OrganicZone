@@ -13,7 +13,7 @@
    $correo = $_POST['correo'];
    $contrasena = $_POST['contrasena'];
    $fechanacimiento = $_POST['fechanacimiento'];
-    $sql = "INSERT INTO clientes (nombre, apellido, nombreusuario, correo, contrasena) VALUES ( '$nombre', '$apellido', '$nombreusuario', '$correo', '$contrasena')";
+    $sql = "INSERT INTO clientes (nombre, apellido, nombreusuario, correo, contrasena, fechanacimiento) VALUES ( '$nombre', '$apellido', '$nombreusuario', '$correo', '$contrasena','$fechanacimiento' )";
     if($conn->query($sql) === TRUE) {
     echo "Nuevo cliente registrado correctamente";
    } else {

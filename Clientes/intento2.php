@@ -218,15 +218,15 @@
   <div class="cajp">
     <nav class="nav">
       <div class="izq">
-        <a href="">Sobre Nosotros</a>
+        <a href="http://localhost/OrganicZone/sobreNosotros.html">Sobre Nosotros</a>
         <a href="../maquetadoOZ.html" class="inic">Inicio</a>
-        <a href="">Contact</a>
+        <a href="http://localhost/OrganicZone/Clientes/leerclientes.php">Regristros de Usuarios</a>
       </div>
       <div class="med">ORGANIC ZONE</div>
       <div class="der">
         <span class="cart">🛒</span>
         <button class="sesion">Iniciar Sesion</button>
-        <button class="reg">Regitrarse</button>
+        <button class="reg" >Regitrarse</button>
       </div>
     </nav>
     <div class="titu">Bienvenido a Organic Zone</div>
