@@ -29,22 +29,54 @@ if ($resultado->num_rows > 0) {
     <title>Document</title>
 </head>
 <body>
+
     <form action="registroeditarcliente.php" method="post">
-        <label for="">id:</label>
-        <input type="number" name="id" value='<?= $id ?>'>
-        <label for="">Nombre cliente:</label>
-        <input type="text" name="nombre" value='<?= $nombre ?>'>
-        <label for="">Apellido:</label>
-        <input type="text" name="apellido" value='<?= $apellido ?>'>
-        <label for="">Nombre usuario:</label>
-        <input type="text" name="nombreusuario" value='<?= $nombreusuario ?>'>
-        <label for="">Correo:</label>
-        <input type="email" name="correo" value='<?= $correo ?>'>
-        <label for="">Contraseña:</label>
-        <input type="password" name="contrasena" value='<?= $contrasena ?>'>
-        <label for="">Fecha de nacimiento:</label>
-        <input type="text" name="fechanacimiento" value='<?= $fechanacimiento ?>'>
-        <input type="submit" value ="Editar">
+       
+        <table>
+        <tr>
+        <td><input type="number" name ="id"required></td>
+        </tr>
+        <tr>
+        <th><label for="nombre">Nombre del cliente:</label></th>
+        </tr>
+        <tr>
+        <td><input type="text" name ="nombre"required></td>
+        </tr>
+        <tr>
+        <th><label for="apellido">Apellido del cliente:</label></th>
+        </tr>
+        <tr>
+        <td><input type="text" name ="apellido"required></td>
+        </tr>
+        <tr>
+        <th><label for="nombreusuario">Nombre de usuario:</label></th>
+        </tr>
+        <tr>
+        <td><input type="text" name ="nombreusuario"required></td>
+        </tr>
+        <tr>
+        <th><label for="correo">Correo-gmail:</label></th>
+        </tr>
+        <tr>
+        <td><input type="email" name ="correo"required></td>
+        </tr>
+        <tr>
+        <th><label for="contrasena">Contraseña:</label></th>
+        </tr>
+        <tr>
+        <td><input type="password" name ="contrasena"required></td>
+        </tr>
+         <tr>
+        <th><label for="fechanacimiento">Fecha de nacimiento:</label></th>
+        </tr>
+        <tr>
+        <td><input type="date" name ="fechanacimiento"required></td>
+        </tr>
+        </table>
+        <input type="submit" value="Editar">       
     </form>
+</div></center>
+</body>
+
 </body>
 </html>
