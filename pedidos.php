@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chango&family=Climate+Crisis:YEAR@1979&family=Luckiest+Guy&family=Vina+Sans&display=swap" rel="stylesheet">
     <style>
@@ -300,7 +301,11 @@ function agregarAlCarrito(id, nombre, precio) {
     let cantidad = parseInt(document.getElementById('cantidad-' + id).innerText);
 
     if (cantidad <= 0) {
-        alert("Selecciona al menos 1 producto");
+        Swal.fire({
+  title: "The Internet?",
+  text: "seleccione al menos 1 producto",
+  icon: "question"
+});
         return;
     }
 
@@ -325,7 +330,17 @@ function agregarAlCarrito(id, nombre, precio) {
     // reset cantidad visual
     document.getElementById('cantidad-' + id).innerText = 0;
 
-    alert("Producto agregado al carrito");
+  
+
+Swal.fire({
+  title: "The Internet?",
+  text: "That thing is still around?",
+  icon: "question"
+});
+            
+
+   
+
 }
 
 // contador global
