@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registro de Productos</title>
+<title>Login - Organic Zone</title>
 
 <style>
 body {
@@ -19,7 +19,7 @@ body {
 
 .cajp {
   background: #fff;
-  margin: 60px auto;
+  margin: 80px auto;
   max-width: 700px;
   border-radius: 60px;
   box-shadow: 0 2px 32px rgba(139, 66, 66, 0.53);
@@ -29,17 +29,20 @@ body {
 
 .nav {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.nav .med {
   font-weight: 700;
   letter-spacing: 2px;
 }
 
 .titu {
-  font-size: 48px;
+  font-size: 64px;
   font-weight: 900;
-  text-align: center;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .forma label {
@@ -56,20 +59,10 @@ body {
   background: none;
   outline: none;
   padding: 10px 2px;
-  transition: border-color 0.2s;
 }
 
 .forma input:focus {
   border-bottom: 1.5px solid #111;
-}
-
-.forma .fil {
-  display: flex;
-  gap: 20px;
-}
-
-.forma .fil input {
-  width: 100%;
 }
 
 .forma button {
@@ -89,9 +82,21 @@ body {
   background: #136901ff;
 }
 
+.extra {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.extra a {
+  text-decoration: none;
+  color: #136901ff;
+  font-weight: 500;
+}
+
 .pie {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
   font-size: 14px;
   opacity: 0.8;
 }
@@ -102,11 +107,7 @@ body {
   }
 
   .titu {
-    font-size: 32px;
-  }
-
-  .forma .fil {
-    flex-direction: column;
+    font-size: 40px;
   }
 }
 </style>
@@ -116,37 +117,25 @@ body {
 
 <div class="cajp">
 
-  <div class="nav">ORGANIC ZONE</div>
+  <div class="nav">
+    <div class="med">ORGANIC ZONE</div>
+  </div>
 
-  <div class="titu">Registro de Producto</div>
+  <div class="titu">Iniciar Sesión</div>
 
-  <form class="forma" action="productos.php" method="post">
+  <form class="forma" method="post" action="login2.php">
 
-    <label>Nombre del producto</label>
-    <input type="text" name="nombreproducto" required>
+    <label>Nombre de usuario</label>
+    <input type="text" name="usuario" placeholder="Ingresa tu usuario" required>
 
-    <div class="fil">
-      <div>
-        <label>Precio de venta</label>
-        <input type="number" name="precioventa" required>
-      </div>
+    <label>Contraseña</label>
+    <input type="password" name="contrasena" placeholder="Ingresa tu contraseña" required>
 
-      <div>
-        <label>Costo</label>
-        <input type="number" name="costo" required>
-      </div>
+    <button type="submit">Ingresar</button>
+
+    <div class="extra">
+      ¿No tienes cuenta? <a href="intento2.php">Regístrate</a>
     </div>
-
-    <div class="fil">
-      <div>
-        <label>Cantidad</label>
-        <input type="number" name="cantidad" required>
-      </div>
-
-
-    </div>
-
-    <button type="submit">Guardar Producto</button>
 
   </form>
 

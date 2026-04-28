@@ -7,13 +7,11 @@ $BDnombre = "productosOZ";
   if($conn->connect_error) {
     die ("conexion fallida" . $conn->connect_error);
   }
-  $id = $_POST['id'];
   $nombreproducto = $_POST['nombreproducto'];
   $precioventa = $_POST['precioventa'];
   $cantidad = $_POST['cantidad'];
   $costo = $_POST['costo'];
-  $categoria = $_POST['categoria'];
-  $sql = "INSERT INTO productos (id, nombreproducto, precioventa, cantidad, costo, categoria) VALUES ('$id', '$nombreproducto', '$precioventa', '$cantidad', '$costo', '$categoria')";
+  $sql = "INSERT INTO productos ( nombreproducto, precioventa, cantidad, costo) VALUES ( '$nombreproducto', '$precioventa', '$cantidad', '$costo')";
   if($conn->query($sql) === TRUE) {
     echo "Nuevo producto creado correctamente";
   } else {
