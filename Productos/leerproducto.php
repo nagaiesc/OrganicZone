@@ -195,20 +195,55 @@ body {
             <!-- SUBIDA -->
             <div class="upload-box">
 
-                <h3>Subir imagen</h3>
+            <h3>Imagen del producto</h3>
 
-                <form action="subirimagen.php" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="id" value="<?= $id ?>">
-                    <input type="file" name="imagen" accept="image/*" onchange="previewImage(event)">
-                    <br>
-                    <button class="btn" type="submit">Guardar</button>
-                </form>
-
+            <!-- IMAGEN ACTUAL -->
+             <?php  
+                //nombre del posible archivo
+                $nombreArchivo="P-".$id;
+                $directorio = "../Imagenes/";
+                //lista de todas las extenciones posibles
+                $extensiones = ["pdf", "jpg", "jpeg", "png", "gif", "webp"];
+                //bandera para verificar todo tipo de archivo
+                $archivoEncontrado = null;
+                //verificar si el archivo se creo en alguna extension conocida
+                foreach ($extensiones as $ext) {
+                    //nombre del archivo con cada extension
+                    $ruta = $directorio . $nombreArchivo . "." . $ext;
+                    //verifica
+                    if (file_exists($ruta)) {
+                        $archivoEncontrado = $ruta;
+                        // detenemos la búsqueda en cuanto lo encuentra
+                        break;
+                    }
+                }
+                
+            ?>
+            <?php if ($archivoEncontrado) {?>
                 <div class="preview">
-                    <img id="preview" src="" alt="Previsualización">
+                    <p style="font-size:13px; color:#777;">Imagen actual</p>
+                    <img src="<?= $archivoEncontrado ?>" alt="Imagen actual">
                 </div>
+            <?php } else { ?>
+                <p style="font-size:13px; color:#999;">Sin imagen cargada</p>
+            <?php } ?>
 
+            <!-- SUBIDA -->
+            <form action="subirimagen.php" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="<?= $id ?>">
+
+                <input type="file" name="imagen" accept="image/*" onchange="previewImage(event)">
+                
+                <button class="btn" type="submit">Actualizar imagen</button>
+            </form>
+
+            <!-- PREVIEW NUEVO -->
+            <div class="preview">
+                <p style="font-size:13px; color:#777;">Previsualización</p>
+                <img id="preview" src="" alt="">
             </div>
+
+</div>
 
         </div>
 
