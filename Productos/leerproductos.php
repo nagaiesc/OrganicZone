@@ -103,6 +103,18 @@ tbody td {
 .acciones a {
     text-decoration: none;
 }
+#boton{
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 8px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold; 
+}
 </style>
 </head>
 
@@ -117,6 +129,7 @@ tbody td {
         </nav>
 
         <h1 class="contrato-titulo">LISTA DE PRODUCTOS</h1>
+        <a href="http://localhost/organiczone/Productos/formularioproductos.php" id="boton">Registrar Producto</a>
 
         <p class="desc">
             Visualiza los productos registrados en el sistema.<br>
