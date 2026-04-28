@@ -176,6 +176,68 @@
             border-radius: 50px;
             width: 40px;
         }
+        productos {
+    width: 400px;
+    height: auto;
+    border-radius: 50px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* CONTADOR */
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.contador button {
+    background: black;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.contador span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* BOTÓN GRANDE */
+.boton {
+    width: 100%;
+    margin-top: 20px;
+    padding: 25px;
+    font-size: 22px;
+    border-radius: 25px;
+    background-color: rgb(4, 93, 22);
+    transition: 0.2s;
+}
+
+.boton:hover {
+    background-color: rgb(6, 120, 30);
+}
+
+/* PRECIO mejor posicionado */
+.precio {
+    position: static;
+    text-align: right;
+    margin-top: -10px;
+}
     </style>
 </head>
 <body>
@@ -194,7 +256,73 @@
         barra.classList.remove('desliza'); // Quita clase cuando vuelve arriba
         }
         });
-    </script>   
+    </script>  
+<script>
+// cambiar cantidad visual
+function cambiarCantidad(id, cambio) {
+    let span = document.getElementById('cantidad-' + id);
+    let valor = parseInt(span.innerText);
+
+    valor += cambio;
+    if (valor < 0) valor = 0;
+
+    span.innerText = valor;
+}
+
+// obtener carrito
+function obtenerCarrito() {
+    return JSON.parse(localStorage.getItem('carrito')) || [];
+}
+
+// guardar carrito
+function guardarCarrito(carrito) {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+// agregar producto
+function agregarAlCarrito(id, nombre, precio) {
+    let cantidad = parseInt(document.getElementById('cantidad-' + id).innerText);
+
+    if (cantidad <= 0) {
+        alert("Selecciona al menos 1 producto");
+        return;
+    }
+
+    let carrito = obtenerCarrito();
+
+    let productoExistente = carrito.find(p => p.id === id);
+
+    if (productoExistente) {
+        productoExistente.cantidad += cantidad;
+    } else {
+        carrito.push({
+            id: id,
+            nombre: nombre,
+            precio: precio,
+            cantidad: cantidad
+        });
+    }
+
+    guardarCarrito(carrito);
+    actualizarContador();
+
+    // reset cantidad visual
+    document.getElementById('cantidad-' + id).innerText = 0;
+
+    alert("Producto agregado al carrito");
+}
+
+// contador global
+function actualizarContador() {
+    let carrito = obtenerCarrito();
+    let total = carrito.reduce((sum, p) => sum + p.cantidad, 0);
+
+    document.getElementById('totalCarrito').innerText = total;
+}
+
+// inicializar
+actualizarContador();
+</script>
 
      <center>
     <nav id="barra">
@@ -205,6 +333,7 @@
     </section>
     <section> <strong><a href="productos.html" id="linkprodu">Pide aquí</a></section></strong>
     <section><a href="Clientes/intento2.php" id="descu2"><h3 id="descu">Iniciar Sesion</h3></a></section>
+    <a href="#" id="carritoIcono">🛒 <span id="totalCarrito">0</span></a>
     </nav>
     </center>
 
@@ -247,23 +376,54 @@ if ($resultado->num_rows > 0) {
             }
         }
         if ($archivoEncontrado) {
-        echo "
-        <div class='productos'>
-            <img class='imagenes' src='$archivoEncontrado' alt='$nombre'>
-            <h1>$nombre</h1>
-            <p class='precio'>{$precio}Bs</p>
-            <button class='boton'>Comprar</button>
-        </div>
-        ";
+       echo "
+            <div class='productos'>
+
+                <div class='contenido'>
+                    <img class='imagenes' src='$archivoEncontrado' alt='$nombre'>
+                    
+                    <h1>$nombre</h1>
+                    <p class='precio'>{$precio}Bs</p>
+
+                    <div class='contador'>
+                        <button onclick='cambiarCantidad({$fila['id']}, -1)'>-</button>
+                        <span id='cantidad-{$fila['id']}'>0</span>
+                        <button onclick='cambiarCantidad({$fila['id']}, 1)'>+</button>
+                    </div>
+                </div>
+            <button class='boton'
+                onclick=\"agregarAlCarrito({$fila['id']}, '$nombre', {$precio})\">
+                Agregar al carrito
+            </button>
+
+            </div>
+            
+            ";
         }else{
-            echo "
-        <div class='productos'>
-            <img class='imagenes' src='beyond burguer.jpeg' alt='$nombre'>
-            <h1>$nombre</h1>
-            <p class='precio'>{$precio}Bs</p>
-            <button class='boton'>Comprar</button>
-        </div>
-        ";
+            echo"
+            <div class='productos'>
+
+                <div class='contenido'>
+                    <img class='imagenes' src='beyond burguer.jpeg' alt='$nombre'>
+                    
+                    <h1>$nombre</h1>
+                    <p class='precio'>{$precio}Bs</p>
+
+                    <div class='contador'>
+                        <button onclick='cambiarCantidad({$fila['id']}, -1)'>-</button>
+                        <span id='cantidad-{$fila['id']}'>0</span>
+                        <button onclick='cambiarCantidad({$fila['id']}, 1)'>+</button>
+                    </div>
+                </div>
+
+                <button class='boton'
+                onclick=\"agregarAlCarrito({$fila['id']}, '$nombre', {$precio})\">
+                Agregar al carrito
+            </button>
+
+            </div>
+            
+            ";
         }
     }
 } else {
