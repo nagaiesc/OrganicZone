@@ -199,9 +199,10 @@
     align-items: center;
     gap: 15px;
     margin-top: 10px;
+    bac
 }
 
-.contador button {
+.contador button { /* estilo bolitas */
     background: black;
     color: white;
     border: none;
@@ -237,6 +238,20 @@
     position: static;
     text-align: right;
     margin-top: -10px;
+}
+#carritoIcono{
+    display: flex;
+    align-items: center;
+    position: relative;
+    right:20px;
+    top: 10px;
+    gap: 8px;
+    background-color: rgba(172, 255, 47, 0.705);
+    color: black;
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;  
 }
     </style>
 </head>
@@ -331,9 +346,12 @@ actualizarContador();
     <a href="contacto.html" id="link2"><h3>Contacto</h3></a>
     <a href="sobreNosotros.html" id="link3"><h3>Sobre Nosotros</h3></a>
     </section>
-    <section> <strong><a href="productos.html" id="linkprodu">Pide aquí</a></section></strong>
-    <section><a href="Clientes/intento2.php" id="descu2"><h3 id="descu">Iniciar Sesion</h3></a></section>
-    <a href="#" id="carritoIcono">🛒 <span id="totalCarrito">0</span></a>
+    <section> <strong><a href="pedidos.php" id="linkprodu">Pide aquí</a></section></strong>
+    <section><a href="Clientes/login.php" id="descu2"><h3 id="descu">Iniciar Sesion</h3></a></section>
+    <section><a href="#" id="carritoIcono">
+        🛒 <span id="totalCarrito">0</span
+        ></a>
+    </section>
     </nav>
     </center>
 
