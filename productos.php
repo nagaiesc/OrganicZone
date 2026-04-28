@@ -211,33 +211,67 @@
     <header>
         <section id="fondo"></section>
     </header>
-     <section id="a" class="titulos" >
-        <div class="productos" >
-            <img class="imagenes" src="beyond burguer.jpeg" alt="">
-            <h1>Beyond Burguer</h1>
-            <p class="precio">21Bs</p>
-            <button class="boton">Comprar</button>
-           
+     <section id="a" class="titulos">
+
+<?php
+$conexion = new mysqli("localhost", "root", "", "productosOZ");
+
+if ($conexion->connect_error) {
+    echo "Error en la conexión";
+}
+
+$sql = "SELECT * FROM productos";
+$resultado = $conexion->query($sql);
+if ($resultado->num_rows > 0) {
+
+    while($fila = $resultado->fetch_assoc()) {
+
+        $nombre = $fila['nombreproducto'];
+        $precio = $fila['precioventa'];
+        //nombre del posible archivo
+        $nombreArchivo="P-".$fila['id'];
+        $directorio = "Imagenes/";
+        //lista de todas las extenciones posibles
+        $extensiones = ["pdf", "jpg", "jpeg", "png", "gif", "webp"];
+        //bandera para verificar todo tipo de archivo
+        $archivoEncontrado = null;
+        //verificar si el archivo se creo en alguna extension conocida
+        foreach ($extensiones as $ext) {
+            //nombre del archivo con cada extension
+            $ruta = $directorio . $nombreArchivo . "." . $ext;
+            //verifica
+            if (file_exists($ruta)) {
+                $archivoEncontrado = $ruta;
+                // detenemos la búsqueda en cuanto lo encuentra
+                break;
+            }
+        }
+        if ($archivoEncontrado) {
+        echo "
+        <div class='productos'>
+            <img class='imagenes' src='$archivoEncontrado' alt='$nombre'>
+            <h1>$nombre</h1>
+            <p class='precio'>{$precio}Bs</p>
+            <button class='boton'>Comprar</button>
         </div>
-        <div class="productos">
-            <img class="imagenes" src="beff burguer.jpeg" alt="">
-            <h1>Beff Master</h1>
-            <p class="precio">27Bs</p>
-            <button class="boton">Comprar</button>
+        ";
+        }else{
+            echo "
+        <div class='productos'>
+            <img class='imagenes' src='beyond burguer.jpeg' alt='$nombre'>
+            <h1>$nombre</h1>
+            <p class='precio'>{$precio}Bs</p>
+            <button class='boton'>Comprar</button>
         </div>
-        <div class="productos">
-            <img class="imagenes" src="smooked fries.jpeg" alt="">
-            <h1>Smooked Fries</h1>
-            <p class="precio">6Bs</p>
-            <button class="boton">Comprar</button>
-        </div>
-        <div class="productos">
-            <img class="imagenes" src="zone shake.jpeg" alt="">
-            <h1>Zone Shake</h1>
-            <p class="precio">15Bs</p>
-            <button class="boton">Comprar</button>
-        </div>
-    </section>
+        ";
+        }
+    }
+} else {
+    echo "<p>No hay productos disponibles</p>";
+}
+?>
+
+</section>
 
     <footer id="c" >
         <center>
