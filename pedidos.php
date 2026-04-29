@@ -302,9 +302,9 @@ function agregarAlCarrito(id, nombre, precio) {
 
     if (cantidad <= 0) {
         Swal.fire({
-  title: "The Internet?",
+  title: "No añadiste ningun producto",
   text: "seleccione al menos 1 producto",
-  icon: "question"
+  icon: "error"
 });
         return;
     }
@@ -333,9 +333,9 @@ function agregarAlCarrito(id, nombre, precio) {
   
 
 Swal.fire({
-  title: "The Internet?",
-  text: "That thing is still around?",
-  icon: "question"
+  title: "Producto añadido al carrito ",
+  icon: "success",
+  draggable: true
 });
             
 
